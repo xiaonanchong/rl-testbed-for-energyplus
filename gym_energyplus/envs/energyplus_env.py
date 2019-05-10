@@ -113,8 +113,8 @@ class EnergyPlusEnv(Env):
         # Make copies of model file and weather file into output dir, and use it for execution
         # This allow update of these files without affecting active simulation instances
         ###shutil.copy('EnergyPlus/Model/2ZoneDataCenterHVAC_wEconomizer_Temp_Fan.idf', output_dir)
-        shutil.copy(self.model_file, output_dir)
         shutil.copy(weather_file, output_dir)
+        shutil.copy(self.model_file, output_dir)
         copy_model_file = output_dir + '/' + os.path.basename(self.model_file)
         copy_weather_file = output_dir + '/' + os.path.basename(weather_file)
 
